@@ -12,17 +12,18 @@ The assignment demonstrates how processes work in Linux using `fork()`, how link
 ---
 
 🗂️ Files Included
-│── process_creation.c      # Demonstrates creating a new process using the `fork()` system call.
-│── file1.c                 # contains a function `hello()`.
-│── file2.c                 # contains the `main()` function and calls `hello()`.
-│── simple_program.c        # A simple C program that prints a message.
-│── Makefile                # Used to compile and clean all project files
-│── README.md               # Documentation file
-│── LICENSE                 # MIT License for this project
-│── answers.txt             # Contains explanations for all assignment questions
+process_creation.c      # Demonstrates creating a new process using the `fork()` system call.
+file1.c                 # contains a function `hello()`.
+file2.c                 # contains the `main()` function and calls `hello()`.
+simple_program.c        # A simple C program that prints a message.
+Makefile                # Used to compile and clean all project files
+README.md               # Documentation file
+LICENSE                 # MIT License for this project
+answers.txt             # Contains explanations for all assignment questions
 
 ---
 
 📄 License
 This project is licensed under the MIT License.  
+
 See the `LICENSE` file for full details.
