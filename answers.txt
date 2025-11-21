@@ -1,0 +1,74 @@
+CSE233 – Assignment 2 Answers
+
+---------------------------------------
+
+Exercise 1: fork() Program Explanation
+
+This program demonstrates process creation in Linux using the fork() system call.
+- fork() creates a child process that runs concurrently with the parent.
+- If pid == 0  (the code is executing inside the child process)
+- If pid > 0   (the code is executing inside the parent process)
+- If pid == -1 (fork failed)
+
+Each process prints its own PID using getpid(), showing that both parent and child are executing the same program but as separate processes.
+
+---------------------------------------
+
+Exercise 2: Running a Process in the Background
+
+Command:
+    sleep 300 &
+The ampersand (&) tells the shell to run the process in the background, allowing the user to continue using the terminal.
+
+---------------------------------------
+
+Exercise 3: Stopping a Process
+
+Commands:
+    ps aux | grep sleep   (Find the process ID (PID))
+    kill <PID>            (Terminates the process)
+    ps aux | grep sleep   (Verify it has stopped)
+
+---------------------------------------
+
+Exercise 4: Pausing and Resuming a Process
+
+Commands:
+    kill -STOP <PID>  (Pauses the process)
+    kill -CONT <PID>  (Resumes the process)
+
+This demonstrates UNIX signals for process control.
+
+---------------------------------------
+
+Exercise 5: Role of the Linker
+
+In the linker example:
+- file1.c defines a function (hello()).
+- file2.c calls that function inside main().
+
+The linker combines both object files:
+    gcc file1.c file2.c -o output_program
+
+The linker resolves external symbols such as:
+- The function defined in file1.c
+- The reference to that function in file2.c
+
+Without the linker, the program cannot be built.
+
+---------------------------------------
+
+Exercise 6: Role of the Loader
+
+The loader is responsible for:
+- Loading the compiled program into memory
+- Mapping shared libraries dynamically
+- Preparing the process for execution
+
+Using:
+    ldd simple_program
+You can see which libraries are dynamically loaded, such as:
+- libc.so
+- ld-linux.so
+
+---------------------------------------
